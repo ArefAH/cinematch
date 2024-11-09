@@ -5,75 +5,45 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> movie recommender</title>
-
+  <title>movie recommender</title>
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body id="top">
   <header class="header" data-header>
     <div class="container">
-
       <div class="overlay" data-overlay></div>
-
       <a href="./index.html" class="logo">
         <img src="../filmlane-master/assets/images/logo-02.png" alt="Filmlane logo">
       </a>
-
       <div class="header-actions">
         <button class="btn btn-primary">Sign in</button>
       </div>
-
-
       <nav class="navbar" data-navbar>
-
         <div class="navbar-top">
-
         </div>
-
         <ul class="navbar-list">
-
           <li>
             <a href="./index.html" class="navbar-link">Home</a>
           </li>
-
           <li>
             <a href="#" class="navbar-link">Bookmark</a>
           </li>
         </ul>
       </nav>
-
     </div>
   </header>
   <main>
     <article>
       <section class="hero">
         <div class="container">
-
           <div class="hero-content">
-
             <p class="hero-subtitle">Cinematch</p>
-
             <h1 class="h1 hero-title">
               Unlimited <strong>Movie</strong> & More.
             </h1>
-
-            <div class="meta-wrapper">
-
-              <div class="badge-wrapper">
-
-              </div>
-
-              <div class="date-time">
-
-
-              </div>
-
-            </div>
-
             <button class="btn btn-primary">
               <ion-icon name="play"></ion-icon>
 
@@ -85,8 +55,238 @@
       </section>
 
 
-  <script src="./assets/js/script.js"></script>
+
+
+
+     
+      <section class="upcoming">
+        <div class="container">
+
+          <div class="flex-wrapper">
+
+            <div class="title-wrapper">
+              <p class="section-subtitle">Online Streaming</p>
+
+              <h2 class="h2 section-title">Now Showing Movies</h2>
+            </div>
+          </div>
+
+          <ul class="movies-list  has-scrollbar">
+            <li>
+              <div class="movie-card">
+
+                <a href="./movie-details.html">
+                  <figure class="card-banner">
+                  </figure>
+                </a>
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card">
+                <a href="./movie-details.html">
+                  <figure class="card-banner">
+                  </figure>
+                </a>
+                <div class="card-meta">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="movie-card">
+
+                <a href="./movie-details.html">
+                  <figure class="card-banner">
+                  </figure>
+                </a>
+                <div class="card-meta">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card">
+                <a href="./movie-details.html">
+                  <figure class="card-banner">
+                  </figure>
+                </a>
+                <div class="card-meta">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="movie-card">
+                <a href="./movie-details.html">
+                  <figure class="card-banner">
+                  </figure>
+                </a>
+                <div class="card-meta">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="movie-card">
+                <a href="./movie-details.html">
+                  <figure class="card-banner">
+                  </figure>
+                </a>
+                <div class="card-meta">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="movie-card">
+                <a href="./movie-details.html">
+                  <figure class="card-banner">
+                  </figure>
+                </a>
+                <div class="card-meta">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="movie-card">
+                <a href="./movie-details.html">
+                  <figure class="card-banner">
+                  </figure>
+                </a>
+                <div class="card-meta">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="movie-card">
+                <a href="./movie-details.html">
+                  <figure class="card-banner">
+                  </figure>
+                </a>
+                <div class="card-meta">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="movie-card">
+                <a href="./movie-details.html">
+                  <figure class="card-banner">
+                  </figure>
+                </a>
+                <div class="card-meta">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="movie-card">
+                <a href="./movie-details.html">
+                  <figure class="card-banner">
+                  </figure>
+                </a>
+                <div class="card-meta">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="movie-card">
+                <a href="./movie-details.html">
+                  <figure class="card-banner">
+                  </figure>
+                </a>
+                <div class="card-meta">
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <button class="chatbot-toggler">
+        <span class="material-symbols-rounded">Movie-Bot</span>
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <div class="chatbot">
+        <header>
+          <h2>Chatbot</h2>
+          <span class="close-btn material-symbols-outlined">close</span>
+        </header>
+        <ul class="chatbox">
+          <li class="chat incoming">
+            <span class="material-symbols-outlined">smart_toy</span>
+            <p>Hi there 👋<br>How can I help you today?</p>
+          </li>
+        </ul>
+        <div class="chat-input">
+          <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+          <span id="send-btn" class="material-symbols-rounded">send</span>
+        </div>
+      </div>
+<script src="./chatbot.js"></script>
+
+    </article>
+  </main>
+
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand-wrapper">
+
+          <a href="./index.html" class="logo">
+            <img src="./assets/images/logo-02.png" alt="Filmlane logo" >
+          </a>
+          <h2>Cinematch</h2>
+          <ul class="footer-list">
+
+            <li>
+              <a href="./index.html" class="footer-link">Home</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Bookmark</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="quicklink-wrapper">
+
+          <ul class="quicklink-list">
+
+            <li>
+              <a href="#" class="quicklink-link">Faq</a>
+            </li>
+
+            <li>
+              <a href="#" class="quicklink-link">Help center</a>
+            </li>
+
+            <li>
+              <a href="#" class="quicklink-link">Terms of use</a>
+            </li>
+
+            <li>
+              <a href="#" class="quicklink-link">Privacy</a>
+            </li>
+
+          </ul>
+
+          
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+  </footer>
+  <!-- <script src="./assets/js/script.js"></script> -->
+
+
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 
