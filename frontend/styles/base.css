@@ -22,3 +22,7 @@
     box-sizing: border-box;
   }
   
+  body {
+  background-color: #131313;
+  color: #fff;
+}

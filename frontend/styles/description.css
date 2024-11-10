@@ -1,15 +1,13 @@
-body {
-  background-color: #131313;
-  color: #fff;
-}
+
 
 .movie {
   background-image: url(./../assets/images/venom-bg.avif);
   background-position: right;
   background-size: cover;
   background-blend-mode: darken;
-  background-position-x: 450px;
   background-color: #13131393;
+  width: 100%;
+  margin-top: 100px;
 }
 
 .duration {
@@ -18,7 +16,6 @@ body {
 }
 
 .fade {
-  width: 100%;
   display: flex;
   gap: 50px;
   background: linear-gradient(
@@ -30,26 +27,25 @@ body {
 
 .movie-poster {
   display: flex;
+  width: 50%;
   align-items: center;
   justify-content: center;
-  width: 100%;
 }
 
 .movie-poster img {
-  width: 75%;
   border-radius: 10px;
+  width: 500px;
 }
 
 .movie-description {
-  width: 150%;
   height: 100vh;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
 .movie-info {
-  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -67,7 +63,6 @@ body {
 }
 
 .button-container {
-  width: 100%;
   display: flex;
   gap: 20px;
 }
@@ -78,18 +73,19 @@ body {
   border: none;
   padding: 12px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
   border-radius: 10px;
 }
 
 .recommendation{
   width: 100%;
-  height: 50vh;
+  margin-bottom: 50px;
 }
 
 .recommendation h2{
-  margin-left: 2.5%;
-  width: 50%;
+  margin: 20px 85px;
 }
 
 .recommendation div{
@@ -97,8 +93,32 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  gap: 30px;
+  margin: 0 2.5%;
 }
 
 .recommendation img{
-  width: 20%;
+  width: 250px;
+}
+
+@media screen and (max-width: 891px){
+  .fade{
+    flex-direction: column;
+    align-items: center;  
+  }
+  .movie-info, .option, .duration{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .recommendation{
+    margin-top: 150px;
+    text-align: center;
+  }
+  .recommendation div{
+    flex-wrap: wrap;
+  }
+  .button-container{
+    justify-content: center;
+  }
 }
