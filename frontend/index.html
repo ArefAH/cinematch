@@ -4,22 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CineMatch - Description</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/description.css">
+    <link rel="stylesheet" href="./styles/base.css">
   </head>
-  <body>
+  <body class="poppins-regular">
     <section class="movie">
       <div class="fade">
         <div class="movie-poster">
           <img src="./assets/images/venom.avif" />
         </div>
         <div class="movie-description">
-          <div>
+          <div class="movie-info">
             <h2>Venom</h2>
-            <p>
+            <p class="duration">
               <img src="./assets/icons/clock.svg" alt="Clock Icon" />1hr 49min
             </p>
             <p>Genre: Action/Adventure</p>
             <p>Release Date: 2024</p>
-            <div>
+            <div class="option">
               <p>Overview</p>
               <p>Actors</p>
             </div>
@@ -32,9 +40,9 @@
               of the adventures of’Eddie & Venom.
             </p>
           </div>
-          <div>
-            <button>Add to my list</button>
-            <button>
+          <div class="button-container">
+            <button class="poppins-semibold">Add to my list</button>
+            <button class="poppins-semibold">
               <img src="./assets/icons/star.svg" alt="Star" />Rate
             </button>
           </div>

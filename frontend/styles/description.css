@@ -1,0 +1,82 @@
+body {
+  background-color: #131313;
+  color: #fff;
+}
+
+.movie {
+  background-image: url(./../assets/images/venom-bg.avif);
+  background-position: right;
+  background-blend-mode: darken;
+  background-position-x: 450px;
+  background-color: #13131393;
+}
+
+.duration {
+  display: flex;
+  gap: 5px;
+}
+
+.fade {
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  background: linear-gradient(
+    90deg,
+    rgb(19, 19, 19) 30%,
+    rgba(254, 254, 254, 0) 100%
+  );
+}
+
+.movie-poster {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.movie-poster img {
+  width: 450px;
+  border-radius: 10px;
+}
+
+.movie-description {
+  width: 150%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.movie-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.option {
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.option p:nth-child(1) {
+  border-bottom: solid 2px #b20000;
+  padding-bottom: 10px;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.button-container button {
+  color: #fff;
+  background-color: #b20000;
+  border: none;
+  padding: 12px;
+  display: flex;
+  gap: 10px;
+  border-radius: 10px;
+}
