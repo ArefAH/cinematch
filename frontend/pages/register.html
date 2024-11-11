@@ -7,7 +7,7 @@
     <title>Register</title>
 </head>
 <body>
-    <div class="register-container">
+    <div class="container">
         <form id="register-Form">
             <h1>Join Cine<span>Match</span></h1>
             <input type="text" id="username" placeholder="Username" required>
@@ -16,8 +16,13 @@
             <button type="submit">Register</button>
         </form>
         <hr>
-        <button id="login-btn">Back To Login</button>
+        <button id="back-login-btn">Back To Login</button>
     </div>
-    <script src="./scripts/registration.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"
+        integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script src="../scripts/authentication.js"></script>
 </body>
+
 </html>
