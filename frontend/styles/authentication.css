@@ -12,7 +12,7 @@ body {
     margin: 0;
 }
 
-.login-container {
+.container {
     padding:  30px 40px;;
     width: 400px;
     text-align: center;
@@ -25,7 +25,7 @@ body {
         padding-left: 100px;
     }
 
-    .login-container {
+    .container {
         margin: 0;
     }
 }
