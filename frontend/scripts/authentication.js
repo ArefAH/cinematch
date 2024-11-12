@@ -41,11 +41,13 @@ async function handleLogin() {
             console.log(response.data);
 
             if (response.data.status === "Login Successful") {
-                localStorage.setItem("username", response.data.username);
-                localStorage.setItem("user_id", response.data.user_id);
-                alert("Login successful! Redirecting...");
-                // window.location.href = "/pages/home.html"; 
-                console.log("worked");
+                localStorage.setItem("username", username);
+                localStorage.setItem("user_id", response.data.id);
+                if (response.data.user_type_id === 1) {
+                    window.location.href = "admin.html";
+                } else {
+                    window.location.href = "index.html";
+                } 
 
             } else {
                 document.getElementById("incorrect-password").innerHTML = '<p class="message-red">Invalid username or password.</p>'
