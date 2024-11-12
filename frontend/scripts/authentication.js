@@ -16,6 +16,21 @@ document.addEventListener("DOMContentLoaded", function () {
             window.location.href = "register.html";
         });
     }
+    
+    if (registerForm) {
+        registerForm.addEventListener("submit", async function (event) {
+            event.preventDefault();
+            handleRegister();
+        });
+    }
+    
+    
+    if (backLoginBtn) {
+        backLoginBtn.addEventListener("click", function () {
+            window.location.href = "login.html";
+            console.log("Back to login");
+        });
+    }
 });
 
 let username;
@@ -58,3 +73,36 @@ async function handleLogin() {
             alert("An error occurred. Please try again.");
         });
 };
+
+
+async function handleRegister() {
+    username = document.getElementById("username").value;
+    password = document.getElementById("password").value;
+
+
+    axios({
+        method: "post",
+        url: "http://localhost/cinematch/backend/register.php",
+        data: new URLSearchParams({
+            username: username,
+            password: password,
+        }),
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+    })
+        .then((response) => {
+            console.log(response.data);
+
+            if (response.data.status === "Successful") {
+                alert("Registration successful! You can now log in.");
+                window.location.href = "login.html";
+            } else {
+                document.getElementById("register-status").innerHTML = '<p class="message-red">Registration failed. Please try again.</p>';
+            }
+        })
+        .catch((error) => {
+            console.error("Error:", error);
+            alert("An error occurred. Please try again.");
+        });
+}
