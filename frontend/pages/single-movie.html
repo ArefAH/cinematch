@@ -21,18 +21,21 @@
         </div>
         <div class="movie-description">
           <div class="movie-info">
-            <h2>Venom</h2>
-            <p class="duration">
-              <img src="./../assets/icons/clock.svg" alt="Clock Icon" />1hr
-              49min
-            </p>
-            <p>Genre: Action/Adventure</p>
-            <p>Release Date: 2024</p>
-            <p class="rating"><img src="./../assets/icons/star.svg" alt="Star" />Rating: 0</p>
+            <h2 id="title">Venom</h2>
+            <div class="duration">
+              <img src="./../assets/icons/clock.svg" alt="Clock Icon" />
+              <p id="duration">1hr 49min</p>
+            </div>
+            <p>Genre: <span id="genre">Action/Adventure</span></p>
+            <p>Release Date: <span id="release">2024</span></p>
+            <div class="rating">
+              <img src="./../assets/icons/star.svg" alt="Star" />
+              <p>Rating:<span id="rating">0</span></p>
+            </div>
             <div class="option">
               <p class="selected-option">Movie Description</p>
             </div>
-            <p>
+            <p id="description">
               In VENOM: THE LAST DANCE, the ultimate installment of the trilogy,
               Tom Hardy is back as Venom, one of the most complex characters in
               the’ Marvel universe. Eddie and Venom are on the run. Everyone is
@@ -42,8 +45,10 @@
             </p>
           </div>
           <div class="button-container">
-            <button class="poppins-semibold">Add to my list</button>
-            <button class="poppins-semibold">
+            <button id="bookmark" class="poppins-semibold">
+              Add to my list
+            </button>
+            <button id="rate" class="poppins-semibold">
               <img src="./../assets/icons/star.svg" alt="Star" />Rate
             </button>
           </div>
