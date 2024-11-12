@@ -55,6 +55,12 @@
   display: flex;
 }
 
+.rating{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 .selected-option{
   border-bottom: solid 2px #b20000;
   padding-bottom: 10px;
