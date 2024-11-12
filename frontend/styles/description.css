@@ -53,8 +53,6 @@
 
 .option {
   display: flex;
-  gap: 20px;
-  cursor: pointer;
 }
 
 .selected-option{
