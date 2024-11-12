@@ -4,15 +4,16 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
+session_start();
+
 include "connection.php";
 
 $username = $_POST["username"];
 $password = $_POST["password"];
 
 $query = $connection->prepare(
-    "SELECT users.id, users.username, users.password, user_type.user_type 
+    "SELECT users.id, users.username, users.password, user_type_id
     FROM users 
-    JOIN user_type ON users.user_type_id = user_type.id 
     WHERE username = ?");
     
 $query->bind_param("s", $username);
@@ -26,9 +27,14 @@ if($result->num_rows != 0){
     $check = password_verify($password, $user['password']);
     
     if ($check) {
+        $_SESSION['id'] = $user['id'];
+        $_SESSION['username'] = $user['username'];
+        $_SESSION['user_type_id'] = $user['user_type_id'];
+        
         echo json_encode([
             "status" => "Login Successful",
-            "user" => $user['username']
+            "user" => $user['username'],
+            "user_type_id" => $user['user_type_id']
         ]);
     }else {
         // Invalid password case
