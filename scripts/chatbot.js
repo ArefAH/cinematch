@@ -19,28 +19,7 @@ const createChatLi = (message, className) => {
     return chatLi;
 }
 
-const handleChat = () => {
-    userMessage = chatInput.value.trim();
-    if (!userMessage) return;
 
-    chatInput.value = "";
-    chatInput.style.height = `${inputInitHeight}px`;
-
-    chatbox.appendChild(createChatLi(userMessage, "outgoing"));
-    chatbox.scrollTo(0, chatbox.scrollHeight);
-
-    console.log('Requesting URL:', 'http://localhost/filmlane-master/front-end/pages/message.php');
-    $.ajax({
-        url:  'message.php',
-        type: 'POST',
-        data: { text: userMessage }, 
-        success: function(result){
-            const reply = `<div class="bot-inbox inbox"><div class="icon"><i class="fas fa-user"></i></div><div class="msg-header"><p>${result}</p></div></div>`;
-            chatbox.innerHTML += reply;  
-            chatbox.scrollTop = chatbox.scrollHeight; 
-        }
-    });
-}
 
 sendChatBtn.addEventListener("click", handleChat);
 closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
