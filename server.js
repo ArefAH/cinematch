@@ -3,7 +3,7 @@ import mysql from 'mysql2';
 import cors from 'cors';  
 
 const app = express();
-const port = 5501;  
+const port = 5500;  
 
 
 app.use(cors());
@@ -12,7 +12,7 @@ const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '',
-  database: 'moviedb',  
+  database: 'cinematch',  
 });
 
 
@@ -25,9 +25,10 @@ db.connect((err) => {
 });
 
 app.get('/movies', (req, res) => {
-  const query = 'SELECT imageSrc FROM movies'; 
+  const query = 'SELECT id,image FROM movies'; 
 
   db.query(query, (err, results) => {
+    
     if (err) {
       console.error('Error fetching data from MySQL:', err);
       res.status(500).send('Error fetching data');

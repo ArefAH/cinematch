@@ -29,7 +29,7 @@ const handleChat = () => {
     chatbox.appendChild(createChatLi(userMessage, "outgoing"));
     chatbox.scrollTo(0, chatbox.scrollHeight);
 
-    console.log('Requesting URL:', 'http://localhost/filmlane-master/front-end/pages/message.php');
+    console.log('Requesting URL:', 'http://localhost/cinematch/frontend/pages/message.php');
     $.ajax({
         url:  'message.php',
         type: 'POST',

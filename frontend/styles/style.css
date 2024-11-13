@@ -183,7 +183,7 @@ html {
 
 
 .hero {
-  background: url("../images/background.webp") no-repeat;
+  background: url("../assets/images/background.webp") no-repeat;
   background-size: cover;
   background-position: center;
   min-height: 750px;
@@ -209,7 +209,7 @@ html {
 
 
 .upcoming {
-  background: url("../images/upcoming-bg.png");
+  background: url("./../assets/images/upcoming-bg.png");
   background-size: cover;
   background-position: center;
   padding-block: var(--section-padding);
@@ -221,7 +221,7 @@ html {
 }
 
 .footer-top {
-  background: url("../images/footer-bg.jpg") no-repeat;
+  background: url("./../assets/images/footer-bg.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   padding-block: 80px 50px;

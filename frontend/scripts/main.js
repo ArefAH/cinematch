@@ -1,7 +1,7 @@
 window.onload = async function () {
   try {
     console.log("Fetching movie data...");
-    const response = await fetch('http://localhost:5501/movies');
+    const response = await fetch('http://localhost:5500/movies');
     if (!response.ok) {
       throw new Error(`Failed to fetch movie images: ${response.statusText}`);
     }
@@ -21,7 +21,7 @@ window.onload = async function () {
 
     movies.forEach((movie) => {
       const img = document.createElement('img');
-      img.src = movie.imageSrc;
+      img.src = movie.image;
       img.style.width = '300px';
       img.style.height = '450px';
       img.style.objectFit = 'cover';
@@ -30,7 +30,7 @@ window.onload = async function () {
       img.addEventListener('click', function () {
         console.log("Image clicked:", this.src); 
 
-        window.location.href = `a.html?imageSrc=${encodeURIComponent(this.src)}`;
+        window.location.href = `a.html?image=${encodeURIComponent(this.src)}`;
       });
 
       

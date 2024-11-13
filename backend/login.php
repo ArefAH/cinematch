@@ -33,6 +33,7 @@ if($result->num_rows != 0){
         
         echo json_encode([
             "status" => "Login Successful",
+            "userId" => $user['id'],
             "user" => $user['username'],
             "user_type_id" => $user['user_type_id']
         ]);
