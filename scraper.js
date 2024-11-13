@@ -48,7 +48,7 @@ const getMovies = async () => {
       const duration = durationPart ? durationPart.replace(")", "").trim() : "";
       return {
         image,
-        link,
+        link: link ? `https://www.pathe.fr${link}` : "",
         title,
         genre,
         duration,
@@ -57,18 +57,26 @@ const getMovies = async () => {
   });
 
   for (const movie of movies) {
-    const insertQuery = "INSERT INTO movies (imageSrc, altText) VALUES (?, ?)";
-    await new Promise((resolve, reject) => {
-      db.query(insertQuery, [movie.imageSrc, movie.altText], (err, results) => {
+    const insertQuery =
+      "INSERT INTO `movies-info` (image, link, title, genre, duration, description) VALUES (?, ?, ?, ?, ?, ?)";
+    db.query(
+      insertQuery,
+      [
+        movie.image,
+        movie.link,
+        movie.title,
+        movie.genre,
+        movie.duration,
+        movie.description,
+      ],
+      (err, results) => {
         if (err) {
           console.error("Error inserting movie into database:", err);
-          reject(err);
         } else {
-          console.log(`Inserted movie: ${movie.altText}`);
-          resolve(results);
+          console.log(`Inserted movie: ${movie.title}`);
         }
-      });
-    });
+      }
+    );
   }
 
   await browser.close();
