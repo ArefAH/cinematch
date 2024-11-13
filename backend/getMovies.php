@@ -1,6 +1,7 @@
 <?php
 include 'connection.php';
 
+
 $movie_id = $_POST['movie_id'];
 
 $query = $connection->prepare('SELECT * FROM `movies` WHERE id = ?');
