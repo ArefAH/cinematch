@@ -6,7 +6,7 @@ const instance = axios.create({
 });
 
 const getInfo = async () => {
-  const response = await instance.post("/getInfo.php", {
+  const response = await instance.post("/getMovies.php", {
     userId: userId,
     movieId: movieId,
   });
