@@ -57,7 +57,7 @@ async function handleLogin() {
 
             if (response.data.status === "Login Successful") {
                 localStorage.setItem("username", username);
-                localStorage.setItem("user_id", response.data.id);
+                localStorage.setItem("userId", response.data.userId);
                 if (response.data.user_type_id === 1) {
                     window.location.href = "admin.html";
                 } else {
