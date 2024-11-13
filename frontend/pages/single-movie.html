@@ -14,33 +14,35 @@
     <link rel="stylesheet" href="./../styles/base.css" />
   </head>
   <body class="poppins-regular">
-    <div class="rating-modal" id="modal">
-      <img src="./../assets/icons/x.svg" alt="Close Button">
-      <div class="star-rating">
-        <img
-          src="./../assets/icons/star-empty.svg"
-          alt="1 star"
-          data-value="1"
-        /><img
-          src="./../assets/icons/star-empty.svg"
-          alt="2 stars"
-          data-value="2"
-        /><img
-          src="./../assets/icons/star-empty.svg"
-          alt="3 stars"
-          data-value="3"
-        /><img
-          src="./../assets/icons/star-empty.svg"
-          alt="4 stars"
-          data-value="4"
-        /><img
-          src="./../assets/icons/star-empty.svg"
-          alt="5 stars"
-          data-value="5"
-        />
+    <div class="rating-container">
+      <div class="rating-modal" id="modal">
+        <img src="./../assets/icons/x.svg" alt="Close Button" class="x-button">
+        <div class="star-rating">
+          <img
+            src="./../assets/icons/star-empty.svg"
+            alt="1 star"
+            data-value="1"
+          /><img
+            src="./../assets/icons/star-empty.svg"
+            alt="2 stars"
+            data-value="2"
+          /><img
+            src="./../assets/icons/star-empty.svg"
+            alt="3 stars"
+            data-value="3"
+          /><img
+            src="./../assets/icons/star-empty.svg"
+            alt="4 stars"
+            data-value="4"
+          /><img
+            src="./../assets/icons/star-empty.svg"
+            alt="5 stars"
+            data-value="5"
+          />
+        </div>
+        <p class="poppins-bold rating">Rating: <span id="rating-value">0</span></p>
+        <button class="poppins-semibold">Add Rating</button>
       </div>
-      <p>Rating: <span id="rating-value">0</span></p>
-      <button>Add Rating</button>
     </div>
     <section class="movie">
       <div class="fade">

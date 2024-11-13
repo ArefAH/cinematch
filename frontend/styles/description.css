@@ -5,7 +5,6 @@
   background-blend-mode: darken;
   background-color: #13131393;
   width: 100%;
-  margin-top: 100px;
 }
 
 .duration {
@@ -104,8 +103,48 @@ button {
   width: 250px;
 }
 
-.hidden{
+.hidden {
   display: none;
+}
+
+.rating-container {
+  z-index: 100;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #b200005e;
+}
+
+.rating-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: #131313;
+  width: 500px;
+  height: 300px;
+  border-radius: 15px;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.star-rating img {
+  width: 40px;
+}
+
+.x-button{
+  align-self: flex-end;
+  margin-right: 10%;
+}
+
+.rating{
+  font-size: 24px;
 }
 
 @media screen and (max-width: 891px) {
