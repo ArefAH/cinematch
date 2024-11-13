@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="./../styles/base.css" />
   </head>
   <body class="poppins-regular">
-    <div class="rating-container">
-      <div class="rating-modal" id="modal">
+    <div class="rating-container hidden" id="modal">
+      <div class="rating-modal">
         <img src="./../assets/icons/x.svg" alt="Close Button" class="x-button" id="x-button">
         <div class="star-rating">
           <img
@@ -40,7 +40,7 @@
             data-value="5"
           />
         </div>
-        <p class="poppins-bold rating">Rating: <span id="rating-value">0</span></p>
+        <p class="poppins-bold rating-text">Rating: <span id="rating-value">0</span></p>
         <button class="poppins-semibold" id="rating-button">Add Rating</button>
       </div>
     </div>

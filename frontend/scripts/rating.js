@@ -13,3 +13,8 @@ function updateStar(value) {
         star.src = starValue <= value ? './../assets/icons/star.svg' : './../assets/icons/star-empty.svg';
     });
 }
+
+xButton.addEventListener('click', ()=>{
+    modal.classList.toggle('hidden')
+    console.log('pressed')
+})

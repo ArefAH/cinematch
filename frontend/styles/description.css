@@ -104,7 +104,7 @@ button {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .rating-container {
@@ -141,9 +141,10 @@ button {
 .x-button{
   align-self: flex-end;
   margin-right: 10%;
+  cursor: pointer;
 }
 
-.rating{
+.rating-text{
   font-size: 24px;
 }
 
