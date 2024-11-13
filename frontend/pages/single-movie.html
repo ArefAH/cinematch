@@ -14,6 +14,32 @@
     <link rel="stylesheet" href="./../styles/base.css" />
   </head>
   <body class="poppins-regular">
+    <div class="rating-modal" id="modal">
+      <div class="star-rating">
+        <img
+          src="./../assets/icons/star-empty.svg"
+          alt="1 star"
+          data-value="1"
+        /><img
+          src="./../assets/icons/star-empty.svg"
+          alt="2 stars"
+          data-value="2"
+        /><img
+          src="./../assets/icons/star-empty.svg"
+          alt="3 stars"
+          data-value="3"
+        /><img
+          src="./../assets/icons/star-empty.svg"
+          alt="4 stars"
+          data-value="4"
+        /><img
+          src="./../assets/icons/star-empty.svg"
+          alt="5 stars"
+          data-value="5"
+        />
+      </div>
+      <p id="rating-value">Rating: 0</p>
+    </div>
     <section class="movie">
       <div class="fade">
         <div class="movie-poster">
@@ -57,13 +83,13 @@
         <img src="./../assets/images/poster.png" />
       </div>
     </section>
-    <script src="./../scripts/dom.js"></script>
-    <script src="./../scripts/description.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"
       integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="./../scripts/dom.js"></script>
+    <script src="./../scripts/description.js"></script>
   </body>
 </html>
