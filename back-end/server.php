@@ -14,7 +14,23 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
+if ($_SERVER['REQUEST_METHOD'] === 'GET' && $_SERVER['REQUEST_URI'] === '/movies') {
+    $query = "SELECT id, imageSrc FROM movies";  
 
+    $result = $conn->query($query);
+
+    if ($result->num_rows > 0) {
+        $movies = [];
+        while($row = $result->fetch_assoc()) {
+            $movies[] = $row;
+        }
+        echo json_encode($movies);  
+    } else {
+        echo json_encode(['message' => 'No movies found']);
+    }
+} else {
+    echo json_encode(['message' => 'Invalid request']);
+}
 
 $conn->close();
 ?>
