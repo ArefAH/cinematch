@@ -1,11 +1,17 @@
 <?php
 
-$host = "localhost";
-$username = "root";
-$pass = "";
-$dbname = "cinamatch";
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Content-Type");
+header("Access-Control-Allow-Methods: POST, GET");
 
-$connection = new mysqli($host, $username, $pass, $dbname);
-if ($connection->connect_error) {
-    die("Conection Error");
+
+$host = 'localhost';
+$username = 'root';
+$password = '';
+$dbname = 'cinematch';
+
+$connection = new mysqli($host, $username, $password, $dbname);
+
+if($connection -> connect_error){
+    die('Connection Error');
 }
