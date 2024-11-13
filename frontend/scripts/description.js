@@ -22,14 +22,13 @@ const getInfo = async () => {
 
 getInfo();
 
-const getRating = async () => {
+const getRating = async (userId, movieId) => {
   const response = await instance.post("/getRating.php", {
     userId: userId,
     movieId: movieId,
   });
   const data = response.data;
   rating.textContent = data.rating;
-  console.log(movieId);
 };
 
 getRating();

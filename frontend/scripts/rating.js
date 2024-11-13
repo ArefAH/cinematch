@@ -1,8 +1,11 @@
+let currentRating = 0;
+
 stars.forEach((star) => {
   star.addEventListener("click", () => {
     const value = star.getAttribute("data-value");
     ratingValue.textContent = `${value}`;
     updateStar(value);
+    currentRating = value;
   });
 });
 
@@ -40,6 +43,7 @@ const addRating = async () => {
       body: JSON.stringify({
         userId: userId,
         movieId: movieId,
+        rating: currentRating,
       }),
     }
   );

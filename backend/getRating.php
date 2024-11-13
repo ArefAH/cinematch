@@ -1,8 +1,11 @@
 <?php
 include 'connection.php';
 
-$user_id = $_POST['user_id'];
-$movie_id = $_POST['movie_id'];
+$rawData = file_get_contents("php://input");
+$data = json_decode($rawData, true);
+
+$user_id = $data['movieId'];
+$movie_id = $data['movieId'];
 
 $query = $connection->prepare('SELECT rating FROM ratings WHERE user_id = ? AND movie_id = ?');
 $query->bind_param('ii', $user_id, $movie_id);
