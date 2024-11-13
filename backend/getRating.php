@@ -1,8 +1,8 @@
 <?php
 include 'connection.php';
 
-$user_id = $_SESSION['user_id'];
-$movie_id = $_GET['movie_id'];
+$user_id = $_POST['user_id'];
+$movie_id = $_POST['movie_id'];
 
 $query = $connection->prepare('SELECT rating FROM ratings WHERE user_id = ? AND movie_id = ?');
 $query->bind_param('ii', $user_id, $movie_id);
