@@ -7,3 +7,6 @@ const rating = document.getElementById('rating');
 const description = document.getElementById('description');
 const bookmark = document.getElementById('bookmark');
 const rate = document.getElementById('rate')
+const modal = document.getElementById('modal');
+const stars = document.querySelectorAll('.star-rating img')
+const ratingValue = document.getElementById('rating-value')
