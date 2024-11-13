@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     if (backLoginBtn) {
         backLoginBtn.addEventListener("click", function () {
-            window.location.href = "login.html";
+            window.location.href = "index.html";
             console.log("Back to login");
         });
     }
