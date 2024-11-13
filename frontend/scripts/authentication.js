@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (registerBtn) {
         registerBtn.addEventListener("click", function () {
-            window.location.href = "register.html";
+            window.location.href = "../frontend/pages/register.html";
         });
     }
     
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     if (backLoginBtn) {
         backLoginBtn.addEventListener("click", function () {
-            window.location.href = "index.html";
+            window.location.href = "../index.html";
             console.log("Back to login");
         });
     }
@@ -61,7 +61,7 @@ async function handleLogin() {
                 if (response.data.user_type_id === 1) {
                     window.location.href = "admin.html";
                 } else {
-                    window.location.href = "index.html";
+                    window.location.href = "../frontend/pages/home.html";
                 } 
 
             } else {
