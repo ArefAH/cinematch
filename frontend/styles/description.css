@@ -1,5 +1,5 @@
 .movie {
-  background-image: url(./../assets/images/venom-bg.avif);
+  background-image: url();
   background-position: right;
   background-size: cover;
   background-blend-mode: darken;
@@ -79,6 +79,7 @@ button {
   justify-content: center;
   gap: 10px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .recommendation {

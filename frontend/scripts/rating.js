@@ -16,5 +16,8 @@ function updateStar(value) {
 
 xButton.addEventListener('click', ()=>{
     modal.classList.toggle('hidden')
-    console.log('pressed')
+})
+
+rate.addEventListener('click', ()=>{
+    modal.classList.toggle('hidden')
 })
