@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CineMatch - Description</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./../styles/description.css" />
+    <link rel="stylesheet" href="./../styles/base.css" />
+  </head>
+  <body class="poppins-regular">
+    <div class="rating-container hidden" id="modal">
+      <div class="rating-modal">
+        <img src="./../assets/icons/x.svg" alt="Close Button" class="x-button" id="x-button">
+        <div class="star-rating">
+          <img
+            src="./../assets/icons/star-empty.svg"
+            alt="1 star"
+            data-value="1"
+          /><img
+            src="./../assets/icons/star-empty.svg"
+            alt="2 stars"
+            data-value="2"
+          /><img
+            src="./../assets/icons/star-empty.svg"
+            alt="3 stars"
+            data-value="3"
+          /><img
+            src="./../assets/icons/star-empty.svg"
+            alt="4 stars"
+            data-value="4"
+          /><img
+            src="./../assets/icons/star-empty.svg"
+            alt="5 stars"
+            data-value="5"
+          />
+        </div>
+        <p class="poppins-bold rating-text">Rating: <span id="rating-value">0</span></p>
+        <button class="poppins-semibold" id="rating-button">Add Rating</button>
+      </div>
+    </div>
+    <section class="movie">
+      <div class="fade">
+        <div class="movie-poster">
+          <img id="poster" src="" alt="Movie Poster"/>
+        </div>
+        <div class="movie-description">
+          <div class="movie-info">
+            <h2 id="title"></h2>
+            <div class="duration">
+              <img src="./../assets/icons/clock.svg" alt="Clock Icon" />
+              <p id="duration"></p>
+            </div>
+            <p>Genre: <span id="genre"></span></p>
+            <p>Release Date: <span id="release"></span></p>
+            <div class="rating">
+              <img src="./../assets/icons/star.svg" alt="Star" />
+              <p>Rating:<span id="rating">0</span></p>
+            </div>
+            <div class="option">
+              <p class="selected-option">Movie Description</p>
+            </div>
+            <p id="description"></p>
+          </div>
+          <div class="button-container">
+            <button id="bookmark" class="poppins-semibold">
+              Add to my list
+            </button>
+            <button id="rate" class="poppins-semibold">
+              <img src="./../assets/icons/star.svg" alt="Star" />Rate
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="recommendation">
+      <h2>Because You Like This One:</h2>
+      <div id="recommendation">
+      </div>
+    </section>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"
+      integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./../scripts/dom.js"></script>
+    <script src="./../scripts/rating.js"></script>
+    <script src="./../scripts/description.js"></script>
+  </body>
+</html>
