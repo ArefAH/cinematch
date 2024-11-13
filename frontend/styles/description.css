@@ -171,4 +171,10 @@ button {
   .button-container {
     justify-content: center;
   }
+  .rating{
+    justify-content: center;
+  }
+  .movie-info{
+    width: 100%;
+  }
 }

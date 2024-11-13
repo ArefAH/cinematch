@@ -32,10 +32,13 @@ const getRating = async () => {
 getRating();
 
 const addBookmark = async () => {
-    const response = await instance.post("/bookmark.php", {
-      userId: userId,
-      movieId: movieId,
-    });
-  };
+  const response = await instance.post("/bookmark.php", {
+    userId: userId,
+    movieId: movieId,
+  });
+};
 
-bookmark.addEventListener('click', addBookmark)
+bookmark.addEventListener("click", () => {
+  
+  addBookmark;
+});
