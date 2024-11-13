@@ -6,7 +6,7 @@ const instance = axios.create({
 });
 
 const getInfo = async () => {
-  const response = await instance.post("/getInfo.php", {
+  const response = await instance.post("/getMovies.php", {
     userId: userId,
     movieId: movieId,
   });
@@ -32,10 +32,13 @@ const getRating = async () => {
 getRating();
 
 const addBookmark = async () => {
-    const response = await instance.post("/bookmark.php", {
-      userId: userId,
-      movieId: movieId,
-    });
-  };
+  const response = await instance.post("/bookmark.php", {
+    userId: userId,
+    movieId: movieId,
+  });
+};
 
-bookmark.addEventListener('click', addBookmark)
+bookmark.addEventListener("click", () => {
+  
+  addBookmark;
+});
