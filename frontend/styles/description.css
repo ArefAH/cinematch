@@ -84,11 +84,13 @@ button {
 
 .recommendation {
   width: 100%;
-  margin-bottom: 50px;
+  height: 50vh;
+  background-color: #131313;
 }
 
 .recommendation h2 {
-  margin: 20px 85px;
+  color: #fff;
+  padding: 20px 85px;
 }
 
 .recommendation div {
@@ -97,7 +99,7 @@ button {
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 30px;
-  margin: 0 2.5%;
+  padding: 0 2.5%;
 }
 
 .recommendation img {
@@ -162,7 +164,7 @@ button {
     justify-content: center;
   }
   .recommendation {
-    margin-top: 150px;
+    padding-top: 50px;
     text-align: center;
   }
   .recommendation div {

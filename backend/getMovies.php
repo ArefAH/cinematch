@@ -1,11 +1,12 @@
 <?php
 include 'connection.php';
+$rawData = file_get_contents("php://input");
+$data = json_decode($rawData, true);
 
-
-$movie_id = $_POST['movie_id'];
+$id = $data['movieId'];
 
 $query = $connection->prepare('SELECT * FROM `movies` WHERE id = ?');
-$query->bind_param('i', $movie_id);
+$query->bind_param('i', $id);
 $query->execute();
 $result = $query->get_result();
 if($result -> num_rows != 0 ){

@@ -30,7 +30,9 @@ window.onload = async function () {
       img.addEventListener('click', function () {
         console.log("Image clicked:", this.src); 
 
-        window.location.href = `a.html?image=${encodeURIComponent(this.src)}`;
+        localStorage.setItem('movieId', movie.id);
+
+        window.location.href = `/cinematch/frontend/pages/single-movie.html`;
       });
 
       

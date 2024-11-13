@@ -3,7 +3,7 @@ include 'connection.php';
 
 $genre = $_POST['genre'];
 
-$query = $connection->prepare('SELECT * FROM `movies-info` WHERE `genre` = ? LIMIT 4');//using temp database
+$query = $connection->prepare('SELECT * FROM `movies` WHERE `genre` = ? LIMIT 4');
 $query->bind_param('s', $genre);
 $query->execute();
 $result = $query->get_result();

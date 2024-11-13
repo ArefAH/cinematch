@@ -1,8 +1,8 @@
 <?php
 include 'connection.php';
 
-$user_id = $_POST['user_id'];
-$movie_id = $_POST['movie_id'];
+$user_id = $_POST['userId'];
+$movie_id = $_POST['movieId'];
 
 $query = $connection->prepare('INSERT INTO `bookmarks` (`users_id`, `movies_id`) VALUES (?, ?)');
 $query->bind_param('ii', $user_id, $movie_id);
