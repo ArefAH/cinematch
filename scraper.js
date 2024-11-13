@@ -56,9 +56,29 @@ const getMovies = async () => {
     });
   });
 
+  for (let i = 0; i < movies.length; i += 3) {
+    const batch = movies.slice(i, i + 3);
+    await Promise.all(batch.map(async (movie) => {
+      if (movie.link) {
+        const moviePage = await browser.newPage();
+        try {
+          await moviePage.goto(movie.link, { waitUntil: 'domcontentloaded' });
+          movie.description = await moviePage.evaluate(() => {
+            return document.querySelector('.modal__content .ft-primary')?.innerText.trim() || '';
+          });
+        } catch (error) {
+          console.error(`Error fetching movie description for ${movie.title}:`, error);
+          movie.description = '';
+        } finally {
+          await moviePage.close();
+        }
+      }
+    }));
+  }
+
   for (const movie of movies) {
     const insertQuery =
-      "INSERT INTO `movies-info` (image, link, title, genre, duration, description) VALUES (?, ?, ?, ?, ?, ?)";
+      "INSERT INTO `movies` (image, link, title, genre, duration, description) VALUES (?, ?, ?, ?, ?, ?)";
     db.query(
       insertQuery,
       [
