@@ -50,8 +50,38 @@ const getSpecificData = async () => {
   console.log(`Description: ${specificData.description}`);
   console.log(`Genre: ${specificData.genre}`);
 
+  const updateQuery = `
+    UPDATE movies 
+    SET 
+      movie_name = ?, 
+      genre = ?, 
+      description = ?, 
+      cast = ?
+    WHERE id = 14
+  `;
 
+  db.query(updateQuery, [
+    specificData.title,
+    specificData.genre,
+    specificData.description,
+    specificData.cast
+  ], (err, results) => {
+    if (err) {
+      console.error('Error updating data in database:', err);
+    } else {
+      console.log('Updated data in database where id = 14');
+    }
+  });
 
-}
+  await browser.close();
+
+  db.end((err) => {
+    if (err) {
+      console.error('Error closing MySQL connection:', err.stack);
+    } else {
+      console.log('MySQL connection closed');
+    }
+  });
+};
 
 getSpecificData();
