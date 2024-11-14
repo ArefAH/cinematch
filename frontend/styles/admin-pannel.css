@@ -1,5 +1,4 @@
 :root {
-    --rich-black-fogra-29: hsl(225, 25%, 9%);
     --light-gray: hsl(0, 3%, 80%);
     --citrine: hsl(2, 100%, 52%);
     --white: hsl(0, 100%, 100%);
@@ -8,7 +7,7 @@
     --fs-4: 26px;
 }
 
-*, *::before, *::after {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -34,13 +33,15 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 150px;
+
 }
 
 .navbar {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 20px;
+    gap: 150px;
     background-color: transparent;
     padding: 10px;
     width: 100%;
@@ -49,7 +50,7 @@ html {
 .navbar-list {
     display: flex;
     list-style: none;
-    gap: 50px;
+    gap: 100px;
     margin: 0;
 }
 
@@ -67,7 +68,7 @@ html {
 }
 
 .hero {
-    background: url("../assets/images/background.webp") no-repeat;
+    background: url("../assets/images/bg.jpeg") no-repeat;
     background-size: cover;
     background-position: center;
     min-height: 750px;
@@ -95,4 +96,29 @@ html {
 
 .hero-title > strong {
     color: var(--citrine);
+}
+.container { max-width: 1320px; }
+
+
+.movies-list { grid-template-columns: repeat(4, 1fr); }
+
+.navbar { margin-inline: auto; }
+
+.header-actions .btn-primary {
+  margin-right: -1000px ;
+  display: flex;
+  --fs-11: 14px;
+  padding: 10px 35px;
+  letter-spacing: 1px;
+}
+
+.hero .container { width: 1320px; }
+
+.header .logo img{
+width: 50%;
+height: 50%;
+}
+
+img {
+    margin-left: 150px;
 }
