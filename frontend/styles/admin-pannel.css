@@ -1,0 +1,98 @@
+:root {
+    --rich-black-fogra-29: hsl(225, 25%, 9%);
+    --light-gray: hsl(0, 3%, 80%);
+    --citrine: hsl(2, 100%, 52%);
+    --white: hsl(0, 100%, 100%);
+    --ff-poppins: 'Poppins', sans-serif;
+    --fs-1: 42px;
+    --fs-4: 26px;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--ff-poppins);
+    scroll-behavior: smooth;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-block: 25px;
+    background: var(--rich-black-fogra-29);
+    transition: background 0.3s ease;
+    z-index: 4;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    background-color: transparent;
+    padding: 10px;
+    width: 100%;
+}
+
+.navbar-list {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    margin: 0;
+}
+
+.navbar-link {
+    color: var(--white);
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+    color: var(--citrine);
+}
+
+.hero {
+    background: url("../assets/images/background.webp") no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 750px;
+    height: 100vh;
+    max-height: 1000px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-block: 100px;
+}
+
+.hero-subtitle {
+    color: var(--citrine);
+    font-size: var(--fs-4);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-title {
+    color: var(--white);
+    font-size: var(--fs-1);
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.hero-title > strong {
+    color: var(--citrine);
+}
