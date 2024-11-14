@@ -47,5 +47,5 @@ const addBookmark = async () => {
 
 bookmark.addEventListener("click", () => {
   console.log(userId, movieId);
-  addBookmark;
+  addBookmark();
 });
