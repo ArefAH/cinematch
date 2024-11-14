@@ -1,0 +1,93 @@
+body {
+    background-image:url(../assets/images/bd-image.png);
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    padding:  30px 40px;;
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    body {
+        justify-content: flex-start;
+        padding-left: 100px;
+    }
+
+    .container {
+        margin: 0;
+    }
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-size: 44px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+input {
+    width: auto;
+    padding: 17px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+button {
+    width: 100%;
+    padding: 17px;
+    background-color: #790808;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #4c0805;
+}
+
+.message-red {
+    margin-top: 15px;
+    color: red;
+    font-size: 14px;
+}
+
+.message-green {
+    margin-top: 15px;
+    color: green;
+    font-size: 14px;
+}
+
+hr {
+    margin: 40px 0;
+    width: 100%;
+    border: none;
+    height: 0.5px;
+    background-color: #444444;
+}
+
+span{
+    color: #790808;
+}
