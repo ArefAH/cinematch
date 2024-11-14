@@ -1,25 +1,28 @@
 <?php
 include 'connection.php';
 
-$user_id = $_POST['user_id'];
-$movie_id = $_POST['movie_id'];
+$rawData = file_get_contents("php://input");
+$data = json_decode($rawData, true);
 
-$query = $connection->prepare('SELECT rating FROM ratings WHERE user_id = ? AND movie_id = ?');
-$query->bind_param('ii', $user_id, $movie_id);
+$movie_id = $data['movieId'];
+
+$query = $connection->prepare('SELECT rating FROM ratings WHERE movies_id = ?');
+$query->bind_param('i', $movie_id);
 $query->execute();
 $result = $query->get_result();
-if($result -> num_rows != 0 ){
-    $array = [];
-    while($row = $result -> fetch_assoc()){
-        $array[] = $row;
+
+if($result->num_rows != 0) {
+    $sum = 0;
+    while($row = $result->fetch_assoc()) {
+        $sum += $row['rating'];
     }
 
-    echo json_encode($array);
-}
-else{
+    echo json_encode([
+        "totalRating" => $sum
+    ]);
+} else {
     echo json_encode([
         "message" => "No Ratings",
     ]);
 }
-
 ?>

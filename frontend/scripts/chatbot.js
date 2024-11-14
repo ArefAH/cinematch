@@ -3,6 +3,7 @@ const closeBtn = document.querySelector(".close-btn");
 const chatbox = document.querySelector(".chatbox");
 const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
+const userId = +window.localStorage.getItem("userId");
 
 let userMessage = null;
 
@@ -29,11 +30,11 @@ const handleChat = () => {
     chatbox.appendChild(createChatLi(userMessage, "outgoing"));
     chatbox.scrollTo(0, chatbox.scrollHeight);
 
-    console.log('Requesting URL:', 'http://localhost/cinematch/frontend/pages/message.php');
+    console.log('Requesting URL:', 'http://localhost/cinematch/backend/message.php');
     $.ajax({
         url:  'message.php',
         type: 'POST',
-        data: { text: userMessage }, 
+        data: { text: userMessage ,userId: userId}, 
         success: function(result){
             const reply = `<div class="bot-inbox inbox"><div class="icon"><i class="fas fa-user"></i></div><div class="msg-header"><p>${result}</p></div></div>`;
             chatbox.innerHTML += reply;  

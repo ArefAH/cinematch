@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CineMatch - Description</title>
+    <link rel="stylesheet" href="./../styles/description.css">
+    <link rel="stylesheet" href="./../styles/base.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles/description.css" />
-    <link rel="stylesheet" href="../styles/base.css" />
+    
   </head>
   <body class="poppins-regular">
     <div class="rating-container hidden" id="modal">
@@ -44,7 +45,7 @@
         <button class="poppins-semibold" id="rating-button">Add Rating</button>
       </div>
     </div>
-    <section class="movie">
+    <section id="movie" class="movie">
       <div class="fade">
         <div class="movie-poster">
           <img id="poster" src="" alt="Movie Poster"/>
@@ -60,7 +61,7 @@
             <p>Release Date: <span id="release"></span></p>
             <div class="rating">
               <img src="./../assets/icons/star.svg" alt="Star" />
-              <p>Rating:<span id="rating">0</span></p>
+              <p>Rating:  <span id="rating">0</span></p>
             </div>
             <div class="option">
               <p class="selected-option">Movie Description</p>
@@ -76,11 +77,6 @@
             </button>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="recommendation">
-      <h2>Because You Like This One:</h2>
-      <div id="recommendation">
       </div>
     </section>
     <script

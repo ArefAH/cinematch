@@ -1,8 +1,10 @@
 <?php
 include 'connection.php';
+$rawData = file_get_contents("php://input");
+$data = json_decode($rawData, true);
 
-$user_id = $_POST['user_id'];
-$movie_id = $_POST['movie_id'];
+$user_id = $data['userId'];
+$movie_id = $data['movieId'];
 
 $query = $connection->prepare('INSERT INTO `bookmarks` (`users_id`, `movies_id`) VALUES (?, ?)');
 $query->bind_param('ii', $user_id, $movie_id);

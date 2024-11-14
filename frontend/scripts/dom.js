@@ -12,3 +12,5 @@ const stars = document.querySelectorAll(".star-rating img");
 const ratingValue = document.getElementById("rating-value");
 const ratingButton = document.getElementById("rating-button");
 const xButton = document.getElementById("x-button");
+const movieBg = document.getElementById('movie')
+const recommendationSection = document.getElementById('recommendation')
