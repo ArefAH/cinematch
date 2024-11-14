@@ -11,38 +11,44 @@ if($connection -> connect_error){
     die('Connection Error');
 }
 
-$apiKey = "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";
+$apiKey = "";
 $apiUrl = "https://api.openai.com/v1/chat/completions"; 
 
-// $userId = $_POST['user_id'];
+$userId = $_POST['userId'];
 
-// $query = $conn->prepare("SELECT motitle FROM bookmarks WHERE user_id = ?");
-// $query->bind_param('i', $userId);
-// $query->execute();
-// $result = $query->get_result();
+$query = "
+    SELECT m.title 
+    FROM bookmarks b
+    JOIN movies m ON b.movies_id = m.id
+    WHERE b.users_id = ?
+    ";
+$stmt = $connection->prepare($query);
+$stmt->bind_param("i", $userId);
+$stmt->execute();
+$result = $stmt->get_result();
 
-// $bookmarkedMovies = [];
-// if ($result->num_rows > 0) {
-//     while ($row = $result->fetch_assoc()) {
-//         $bookmarkedMovies[] = $row['movie_title'];
-//     }
-// }
+$bookmarkedMovies = [];
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $bookmarkedMovies[] = $row['title'];
+    }
+}
 
-// $query->close();
-// $conn->close();
+$stmt->close();
+$connection->close();
 
-// if (!empty($bookmarkedMovies)) {
-//     $bookmarksText = "Based on your bookmarks: " . implode(", ", $bookmarkedMovies) . ", I recommend the following movies:";
-// } else {
-//     $bookmarksText = "You haven't bookmarked any movies yet, but here are some recommendations:";
-// }
+if (!empty($bookmarkedMovies)) {
+    $bookmarksText = "Based on your bookmarks: " . implode(", ", $bookmarkedMovies) . ", please recommend only 3 movies:";
+} else {
+    $bookmarksText = "You haven't bookmarked any movies yet, but please recommend only 3 movies:";
+}
 
 $getMesg = $_POST['text'];
 $data = array(
     "model" => "gpt-3.5-turbo", 
     "messages" => [
         ["role" => "system", "content" => "You are a helpful assistant."],
-        ["role" => "user", "content" => 'Hello'] 
+        ["role" => "user", "content" => $bookmarksText . " " . $getMesg] 
     ]
 );
 
