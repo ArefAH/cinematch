@@ -1,0 +1,182 @@
+.movie {
+  background-image: url();
+  background-position: right;
+  background-size: cover;
+  background-blend-mode: darken;
+  background-color: #13131393;
+  width: 100%;
+}
+
+.duration {
+  display: flex;
+  gap: 5px;
+}
+
+.fade {
+  display: flex;
+  gap: 50px;
+  background: linear-gradient(
+    90deg,
+    rgb(19, 19, 19) 30%,
+    rgba(254, 254, 254, 0) 100%
+  );
+}
+
+.movie-poster {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-poster img {
+  border-radius: 10px;
+  width: 500px;
+}
+
+.movie-description {
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 80%;
+}
+
+.option {
+  display: flex;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.selected-option {
+  border-bottom: solid 2px #b20000;
+  padding-bottom: 10px;
+}
+
+.button-container {
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  color: #fff;
+  background-color: #b20000;
+  border: none;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.recommendation {
+  width: 100%;
+  height: 50vh;
+  background-color: #131313;
+}
+
+.recommendation h2 {
+  color: #fff;
+  padding: 20px 85px;
+}
+
+.recommendation div {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  padding: 0 2.5%;
+}
+
+.recommendation img {
+  width: 250px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.rating-container {
+  z-index: 100;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #b200005e;
+}
+
+.rating-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: #131313;
+  width: 500px;
+  height: 300px;
+  border-radius: 15px;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.star-rating img {
+  width: 40px;
+}
+
+.x-button{
+  align-self: flex-end;
+  margin-right: 10%;
+  cursor: pointer;
+}
+
+.rating-text{
+  font-size: 24px;
+}
+
+@media screen and (max-width: 891px) {
+  .fade {
+    flex-direction: column;
+    align-items: center;
+  }
+  .movie-info,
+  .option,
+  .duration {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .recommendation {
+    padding-top: 50px;
+    text-align: center;
+  }
+  .recommendation div {
+    flex-wrap: wrap;
+  }
+  .button-container {
+    justify-content: center;
+  }
+  .rating{
+    justify-content: center;
+  }
+  .movie-info{
+    width: 100%;
+  }
+}
