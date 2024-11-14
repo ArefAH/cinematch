@@ -59,7 +59,7 @@ async function handleLogin() {
                 localStorage.setItem("username", username);
                 localStorage.setItem("userId", response.data.userId);
                 if (response.data.user_type_id === 1) {
-                    window.location.href = "admin.html";
+                    window.location.href = "../frontend/pages/admin-pannel.html";
                 } else {
                     window.location.href = "../frontend/pages/home.html";
                 } 
